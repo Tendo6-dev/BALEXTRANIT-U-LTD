@@ -10,14 +10,14 @@ public class PassengerSource {
     }
 
     public boolean requestPickup() {
-        // Generate random locations (0-100 range)
+        
         Location pickup = new Location(random.nextInt(101), random.nextInt(101));
         Location destination = new Location(random.nextInt(101), random.nextInt(101));
         
-        // Create new passenger
+        
         Passenger passenger = new Passenger(pickup, destination);
         
-        // Request company to schedule vehicle
+        
         return company.schedulePickup(passenger);
     }
 }
